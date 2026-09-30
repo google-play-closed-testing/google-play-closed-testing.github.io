@@ -146,6 +146,27 @@ section.band { padding: var(--section-gap) 0; }
 .card .cost { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(26, 51, 0, .2); font-size: .95rem; }
 .card .cost strong { display: block; margin-top: 4px; }
 
+/* Pricing tiers. Four plans in four columns, collapsing to two then one.
+   The featured plan is raised by border weight rather than a colour block, so the
+   highlighter stays reserved for headline accents and micro-labels. */
+.tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); margin-top: 40px; }
+.tier { display: flex; flex-direction: column; padding: 24px; border: 1px solid var(--forest-ink); border-radius: var(--radius-card); background: var(--cream); }
+.tier.featured { border-width: 2px; }
+.tier-tag { align-self: flex-start; padding: .3rem .6rem; border-radius: var(--radius-tag); background: var(--mint); font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; }
+.tier.featured .tier-tag { background: var(--highlighter); }
+.tier h3 { margin-top: 16px; }
+.tier .tier-line { margin-top: 8px; font-size: .95rem; color: var(--muted); }
+.tier .price { margin-top: 20px; font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; line-height: 1; }
+.tier .price-note { margin-top: 6px; font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.tier .perks { display: grid; gap: 10px; margin: 20px 0 24px; padding-top: 18px; border-top: 1px solid var(--pencil); }
+.tier .perks li { position: relative; padding-left: 24px; font-size: .92rem; color: var(--muted); }
+.tier .perks li::before { content: ""; position: absolute; left: 1px; top: .35rem; width: 12px; height: 6px; border-left: 2px solid var(--forest-ink); border-bottom: 2px solid var(--forest-ink); transform: rotate(-45deg); }
+.tier .btn { margin-top: auto; width: 100%; justify-content: center; }
+
+/* Full-width block on an interior page, outside the 70ch prose measure. */
+.block { margin-top: 56px; }
+.block .note { margin-top: 24px; font-size: .9rem; color: var(--muted); }
+
 /* Split: copy + sticky note */
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
 .sticky-note { border-radius: var(--radius-card); padding: 28px; background: var(--mint); }
@@ -339,8 +360,9 @@ footer { border-top: 1px solid var(--pencil); padding: 40px 0 48px; }
   @keyframes sweep { to { transform: scaleX(1); } }
   [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0s); }
   [data-reveal].in { opacity: 1; transform: none; }
-  .cards > *:nth-child(2), .phases > *:nth-child(2), .method > *:nth-child(2) { --d: 70ms; }
-  .cards > *:nth-child(3), .phases > *:nth-child(3), .method > *:nth-child(3) { --d: 140ms; }
+  .cards > *:nth-child(2), .phases > *:nth-child(2), .method > *:nth-child(2), .tiers > *:nth-child(2) { --d: 70ms; }
+  .cards > *:nth-child(3), .phases > *:nth-child(3), .method > *:nth-child(3), .tiers > *:nth-child(3) { --d: 140ms; }
+  .tiers > *:nth-child(4) { --d: 210ms; }
 }
 
 @media (max-width: 1024px) {
@@ -351,7 +373,7 @@ footer { border-top: 1px solid var(--pencil); padding: 40px 0 48px; }
 }
 @media (max-width: 980px) {
   .split { grid-template-columns: 1fr; gap: 32px; }
-  .cards, .cards.two, .phases, .method { grid-template-columns: repeat(2, 1fr); }
+  .cards, .cards.two, .phases, .method, .tiers { grid-template-columns: repeat(2, 1fr); }
   .problems li { grid-template-columns: 1fr; gap: 6px; }
   .faq { grid-template-columns: 1fr; }
   .foot { grid-template-columns: 1fr; }
@@ -373,7 +395,7 @@ footer { border-top: 1px solid var(--pencil); padding: 40px 0 48px; }
   .stats li + li { padding-left: 0; border-left: 0; }
   .stats li:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--pencil); }
   .stats li:nth-child(n+3) { border-top: 1px solid var(--pencil); }
-  .cards, .cards.two, .phases, .method { grid-template-columns: 1fr; }
+  .cards, .cards.two, .phases, .method, .tiers { grid-template-columns: 1fr; }
   .chapters { grid-template-columns: 1fr; }
   .panel { padding: 24px; }
   .steps li { grid-template-columns: 40px minmax(0, 1fr); }
