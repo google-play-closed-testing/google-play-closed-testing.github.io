@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="Your app or production access request was rejected. Read the stated reason first, then work out whether the fix is the app, the test, or both.">
+  <title>App or production access rejected: what to do next</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="../services/index.html">Services</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../guides/index.html">Guides</a>
+        <a href="../blog/index.html">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span><span>Rejected</span>
+        </nav>
+        <div class="page-head">
+          <h1>Rejected? Read the reason before you change anything</h1>
+          <p class="lede">A rejection cites a specific cause, and the cause decides your next move. Changing the wrong thing costs another fortnight.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft" href="../guides/google-play-production-access-requirements.html">Production access requirements</a>
+        </div>
+
+        <div class="prose">
+          <h2>Sort the reason into one of three buckets</h2>
+          <p>Almost every rejection lands in one of these categories, and they need opposite responses.</p>
+          <ul>
+            <li><strong>The test itself.</strong> Not enough opted-in testers, a window that was not continuous, or a test that did not run for the full period.</li>
+            <li><strong>The app.</strong> A policy problem with the app, a broken experience, missing functionality, or content that does not match what the listing claims.</li>
+            <li><strong>The paperwork.</strong> The application answers described no real testing, or the listing itself is incomplete.</li>
+          </ul>
+
+          <div class="callout mint">
+            <h3>The distinction that matters most</h3>
+            <p>If the reason mentions testing, no amount of app polish fixes it. If the reason mentions the app or its policies, no amount of extra testers fixes it. Match the fix to the stated cause, not to the change that feels easiest.</p>
+          </div>
+
+          <h2>If the reason was the test</h2>
+          <ol>
+            <li>Audit who is genuinely opted in right now, rather than who is on the list.</li>
+            <li>Get the count comfortably above twelve.</li>
+            <li>Write down the date it holds. That becomes day one.</li>
+            <li>Run the full fourteen continuous days, checking daily and replacing anyone inactive.</li>
+            <li>Reapply with the record in hand, and reference the dates in your answers.</li>
+          </ol>
+
+          <h2>If the reason was the app</h2>
+          <p>Fix the specific thing named, then check whether that fix needs a fresh test window before you reapply. A material change to the app during or after a test is worth accounting for in your answers rather than glossing over.</p>
+
+          <h2>If the reason was the paperwork</h2>
+          <p>Reapply with answers that describe a test only you could have run: the dates, the tester count, the devices, the feedback, and the changes you made. Generic answers about improving the user experience read as though no test happened.</p>
+
+          <h2>What not to do</h2>
+          <ul>
+            <li><strong>Do not add testers to a finished window.</strong> It does not extend or repair a completed period.</li>
+            <li><strong>Do not buy headcount.</strong> Inactive testers and emulated devices are the fastest way to turn one rejection into two.</li>
+            <li><strong>Do not resubmit unchanged.</strong> An identical application after a rejection wastes the review slot.</li>
+            <li><strong>Do not guess at the cause.</strong> If the wording is unclear, ask Google through the console support route rather than assuming.</li>
+          </ul>
+
+          <h2>Running the window again, properly</h2>
+          <p>The second attempt is usually easier, because you know where it broke. The requirement is unchanged: at least twelve opted-in testers, held for fourteen continuous days, followed by an application that describes what actually happened. The <a href="../guides/how-to-pass-google-play-closed-testing.html">walkthrough</a> covers the sequence, and the <a href="../blog/14-days-not-counting-fix-timeline.html">timeline post</a> explains why windows restart.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="../contact/index.html">Ask a question</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../services/index.html">Services</a>
+          <a href="../pricing/index.html">Pricing</a>
+          <a href="../guides/index.html">Guides</a>
+          <a href="../blog/index.html">Blog</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../app-rejected/index.html">Rejected apps</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../terms-conditions/index.html">Terms</a>
+          <a href="../refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

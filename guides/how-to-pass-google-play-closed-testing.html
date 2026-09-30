@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="A step-by-step walkthrough of Google Play closed testing: creating the track, getting 12 testers opted in, holding the count for 14 continuous days, and applying for production access.">
+  <title>How to pass Google Play closed testing, step by step</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="../services/index.html">Services</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../guides/index.html" aria-current="page">Guides</a>
+        <a href="../blog/index.html">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Guides</a><span aria-hidden="true">/</span><span>Walkthrough</span>
+        </nav>
+        <div class="page-head">
+          <h1>How to pass Google Play closed testing</h1>
+          <p class="lede">The whole thing end to end, from an empty console to a submitted production access request, without the parts that quietly reset your clock.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft" href="how-to-add-testers-google-play-console.html">Adding testers</a>
+        </div>
+
+        <div class="prose">
+          <h2>Before you start</h2>
+          <p>Two minutes of checking here saves you a fortnight of the wrong work.</p>
+          <ul>
+            <li>Confirm the requirement applies to your account type, and read the wording on your own console screen.</li>
+            <li>Have more than twelve testers lined up, not exactly twelve.</li>
+            <li>Know which Google account each tester will use, because that is the account that has to open the opt-in link.</li>
+            <li>Make sure your bundle uploads cleanly to a testing track before you invite anybody.</li>
+          </ul>
+
+          <h2>The walkthrough</h2>
+          <ol>
+            <li><strong>Open the testing section.</strong> In Play Console, select your app, then Testing, then Closed testing.</li>
+            <li><strong>Create the track.</strong> Add a new closed track and upload your app bundle to it.</li>
+            <li><strong>Add your tester list.</strong> Either individual Google addresses or a Google Group. Add spares.</li>
+            <li><strong>Publish the track.</strong> Nothing is visible to testers until you publish. This is the step people skip and then wonder why the link does nothing.</li>
+            <li><strong>Copy the opt-in link.</strong> It appears on the track page once published. This is the link testers open, signed in to the account you listed.</li>
+            <li><strong>Get twelve opted in.</strong> Opted in means joined through the link and installed from the Play Store listing. Watch the count move.</li>
+            <li><strong>Hold it for fourteen continuous days.</strong> Check daily. Anyone who leaves has to be replaced without the count dropping below twelve.</li>
+            <li><strong>Apply for production access.</strong> Once the twelve have held for the full window, submit the request and answer the questions.</li>
+          </ol>
+
+          <div class="callout mint">
+            <h3>The three details that decide everything</h3>
+            <p>Opted in, not listed. Continuous, not cumulative. Twelve at the lowest point, not twelve at the start. Almost every failed window breaks one of those three and nothing else.</p>
+          </div>
+
+          <h2>Day by day</h2>
+          <p><strong>Day 0.</strong> Setup and first opt-ins. This is the only day with real admin in it.</p>
+          <p><strong>Days 1 to 13.</strong> Maintenance. Check the opted-in count, confirm people are still active, replace anyone who has gone quiet. It takes about a minute if the testers are reliable.</p>
+          <p><strong>Day 14 and after.</strong> With twelve testers held continuously, the production access step becomes available. Apply while you still have the testers opted in.</p>
+
+          <h2>The five ways this breaks</h2>
+          <ul>
+            <li><strong>A tester used the wrong Google account.</strong> The app never appears for them, so their opt-in never registers.</li>
+            <li><strong>Someone installed from a file.</strong> An install that did not come from the Play listing does not count.</li>
+            <li><strong>The count dipped.</strong> Two people left on day nine while you were not watching, and the window restarted.</li>
+            <li><strong>The track was never published.</strong> The opt-in link leads nowhere and nothing begins.</li>
+            <li><strong>Internal testing was used instead.</strong> It is a different track and it does not satisfy the requirement.</li>
+          </ul>
+
+          <h2>What to have ready for the application</h2>
+          <p>By the time you apply you should be able to state, without digging: how many testers were opted in, across what dates, what they reported, and what you changed as a result. If you can say that plainly, the form stops being intimidating.</p>
+
+          <div class="callout blush">
+            <h3>Keep the evidence</h3>
+            <p>Save the notes, the feedback, and the dates as the window runs, not afterwards. Reconstructing a fortnight of activity from memory is the hardest part of a rejection response.</p>
+          </div>
+
+          <h2>Next</h2>
+          <p>If you are still setting up, the tester guide covers the list and the opt-in mechanics in detail. If your window has already closed, go straight to the production access requirements.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="google-play-production-access-requirements.html">Production access requirements</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../services/index.html">Services</a>
+          <a href="../pricing/index.html">Pricing</a>
+          <a href="../guides/index.html">Guides</a>
+          <a href="../blog/index.html">Blog</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../app-rejected/index.html">Rejected apps</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../terms-conditions/index.html">Terms</a>
+          <a href="../refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="If your 14-day closed test did not count, the cause is almost always the continuity of the opted-in count. Here is how to read the timeline and restart it properly.">
+  <title>Your 14 days did not count: how to fix the timeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="../services/index.html">Services</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../guides/index.html">Guides</a>
+        <a href="../blog/index.html" aria-current="page">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Blog</a><span aria-hidden="true">/</span><span>Timeline</span>
+        </nav>
+        <div class="page-head">
+          <h1>Your 14 days did not count</h1>
+          <p class="lede">You ran a test, you waited, and the option to apply is still locked. In nearly every case the cause is the same word in Google's sentence: continuously.</p>
+        </div>
+
+        <div class="prose">
+          <p>The rule asks for testers who have been opted in for at least the last 14 days <strong>continuously</strong>. That word does the damage, because it means the qualifying period is measured backwards from today, not from the day you started.</p>
+
+          <h2>What continuity actually means</h2>
+          <p>If your opted-in count sat at twelve for five days, dropped to ten for two days, then returned to twelve for nine more, you do not have fourteen continuous days. You have the most recent stretch, which at that point is nine days. The clock did not pause. It restarted.</p>
+          <p>Day twelve of a broken window is genuinely day twelve of a new one, no matter how much work went into the first attempt.</p>
+
+          <h2>The four causes, in order of frequency</h2>
+          <ul>
+            <li><strong>Drop-outs.</strong> Two or three testers quietly uninstall on day eight. Nobody notices until the count is read.</li>
+            <li><strong>Tester swaps.</strong> Replacing a tester is fine, as long as the count never dips below twelve while you do it.</li>
+            <li><strong>The test was stopped.</strong> Pausing or ending a track interrupts the window.</li>
+            <li><strong>The count never reached twelve in the first place.</strong> Eleven opted-in testers for a month is still eleven.</li>
+          </ul>
+
+          <div class="callout mint">
+            <h3>The habit that prevents all four</h3>
+            <p>Read the opted-in count once a day, and treat any dip as urgent rather than as something to look at tomorrow. A dip you fix within a day costs you a day. A dip you find on day fourteen costs you fourteen.</p>
+          </div>
+
+          <h2>How to restart properly</h2>
+          <ol>
+            <li>Stop adding people at random and audit the current list: who is genuinely opted in right now?</li>
+            <li>Get the count comfortably above twelve, not exactly twelve.</li>
+            <li>Note the date it holds. That is day one of the new window, and it is the date you will quote in your application.</li>
+            <li>Check daily for the full fourteen days, and replace anyone who goes inactive immediately.</li>
+            <li>Apply only once fourteen continuous days are genuinely behind you.</li>
+          </ol>
+
+          <h2>Why spare testers are not padding</h2>
+          <p>A buffer of two or three people is the cheapest insurance in this process. They do nothing when everything goes well, and they absorb a drop-out without the count dipping at all when it does not. If you are recruiting by hand, recruiting fifteen instead of twelve is the single highest-value change you can make.</p>
+
+          <p>For the full sequence, see the <a href="../guides/how-to-pass-google-play-closed-testing.html">closed testing walkthrough</a>, and check Google's own wording in <a href="https://support.google.com/googleplay/android-developer/answer/14151465" target="_blank" rel="noopener">the policy</a> before you rely on any summary, including this one.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="internal-vs-closed-vs-open-testing.html">Which track counts</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../services/index.html">Services</a>
+          <a href="../pricing/index.html">Pricing</a>
+          <a href="../guides/index.html">Guides</a>
+          <a href="../blog/index.html">Blog</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../app-rejected/index.html">Rejected apps</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../terms-conditions/index.html">Terms</a>
+          <a href="../refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

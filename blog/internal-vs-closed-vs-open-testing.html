@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="Internal, closed and open testing compared: what each track is for, who can join, and why only the closed testing track satisfies the 12-tester requirement.">
+  <title>Internal vs closed vs open testing: which track counts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="../services/index.html">Services</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../guides/index.html">Guides</a>
+        <a href="../blog/index.html" aria-current="page">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Blog</a><span aria-hidden="true">/</span><span>Tracks</span>
+        </nav>
+        <div class="page-head">
+          <h1>Internal, closed, or open</h1>
+          <p class="lede">Three testing tracks, three different jobs. Only one of them satisfies the 12-tester requirement, and it is not the one people reach for first.</p>
+        </div>
+
+        <div class="prose">
+          <p>Play Console gives you three ways to release a build before the open store. They look similar in the interface, which is exactly why people use the wrong one and then wonder why the requirement still shows as unmet.</p>
+        </div>
+
+        <div class="cards" style="margin-top:32px">
+          <article class="card">
+            <i class="ph ph-minus-circle lead" aria-hidden="true"></i>
+            <h3>Internal testing</h3>
+            <p>Your own team, up to 100 people. Fast, private, and useful for smoke-testing a build before anyone outside sees it.</p>
+            <p class="cost"><span class="mono">Counts for the requirement</span><strong>No</strong></p>
+          </article>
+          <article class="card">
+            <i class="ph ph-check-circle lead" aria-hidden="true"></i>
+            <h3>Closed testing</h3>
+            <p>Invited testers only, added by email list or Google Group. This is the track the 12-tester rule is written about.</p>
+            <p class="cost"><span class="mono">Counts for the requirement</span><strong>Yes</strong></p>
+          </article>
+          <article class="card">
+            <i class="ph ph-minus-circle lead" aria-hidden="true"></i>
+            <h3>Open testing</h3>
+            <p>Anyone can join from the store listing. Good for broader feedback once you are already through the gate.</p>
+            <p class="cost"><span class="mono">Counts for the requirement</span><strong>No</strong></p>
+          </article>
+        </div>
+
+        <div class="prose">
+          <h2>Why internal testing does not count</h2>
+          <p>The requirement is specifically about a closed test. Internal testers are your own team, and an internal install tells a reviewer nothing about how a stranger experiences the app. If you have been running an internal track for a month and waiting for the production access step to unlock, that is the reason it has not.</p>
+
+          <h2>Why open testing is the wrong tool here</h2>
+          <p>Open testing is not gated by an opt-in link, so the notion of "opted-in testers" does not apply in the way the rule describes. It is a good track to move to once you have production access, not a shortcut to it.</p>
+
+          <div class="callout mint">
+            <h3>One sentence to remember</h3>
+            <p>Internal is for your team, closed is for the requirement, open is for afterwards. Anything you do on the wrong track is useful work that the rule does not see.</p>
+          </div>
+
+          <h2>Can you run more than one at once</h2>
+          <p>Yes, and it is normal to. Many teams keep an internal track moving for their own checks while a closed track runs for the requirement. They are separate channels with separate testers, so activity on one does not feed the other.</p>
+
+          <h2>Switching tracks mid-flight</h2>
+          <p>If you discover you have been testing on the wrong track, the fix is not to move testers across but to start the closed track properly and begin counting from the day twelve testers are genuinely opted in on it. There is no way to convert internal history into closed testing days.</p>
+
+          <p>Full sequence in the <a href="../guides/how-to-pass-google-play-closed-testing.html">walkthrough</a>, and the tester mechanics in <a href="../guides/how-to-add-testers-google-play-console.html">adding testers</a>.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="personal-vs-organization-account.html">Which rule applies to you</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../services/index.html">Services</a>
+          <a href="../pricing/index.html">Pricing</a>
+          <a href="../guides/index.html">Guides</a>
+          <a href="../blog/index.html">Blog</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../app-rejected/index.html">Rejected apps</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../terms-conditions/index.html">Terms</a>
+          <a href="../refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

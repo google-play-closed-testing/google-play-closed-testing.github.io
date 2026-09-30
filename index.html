@@ -1,9 +1,500 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="Google Play closed testing explained: the 12 testers and 14-day requirement in Google's own words, how to set the track up, how testers opt in, comparing your options, applying for production access, and what to do after a rejection.">
+  <title>Google Play Closed Testing: the 12 testers and 14-day rule</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="services/index.html">Services</a>
+        <a href="pricing/index.html">Pricing</a>
+        <a href="guides/index.html">Guides</a>
+        <a href="blog/index.html">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <div id="top"></div>
+
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <span class="tag intro" style="--d:0ms"><i class="ph ph-lightbulb" aria-hidden="true"></i>Google Play closed testing</span>
+        <h1 id="hero-title" class="intro" style="--d:80ms">Twelve testers. Fourteen days. One <span class="hl">launch.</span></h1>
+        <p class="hero-sub intro" style="--d:160ms">Everything the closed testing rule asks for, in the order you meet it. Written from Google's published policy, not from folklore.</p>
+        <div class="hero-actions intro" style="--d:240ms">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-teal btn-lg" href="#learn">Read the 101</a>
+        </div>
+        <p class="reassure intro" style="--d:300ms">Independent guide. Not affiliated with Google.</p>
+      </section>
+
+      <section class="stats" aria-label="The requirement in numbers">
+        <ul>
+          <li data-reveal><span class="stat-num" data-count="12">12</span><span class="mono">Testers</span><span class="stat-body">Opted in, at the same time</span></li>
+          <li data-reveal><span class="stat-num" data-count="14">14</span><span class="mono">Days</span><span class="stat-body">Continuous, unbroken</span></li>
+          <li data-reveal><span class="stat-num" data-count="3">3</span><span class="mono">Tracks</span><span class="stat-body">Only one of them counts</span></li>
+          <li data-reveal><span class="stat-num" data-count="1">1</span><span class="mono">Application</span><span class="stat-body">Sent when the window closes</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="band" id="rule">
+      <div class="wrap">
+        <div class="split">
+          <div data-reveal>
+            <span class="tag"><i class="ph ph-scales" aria-hidden="true"></i>The requirement</span>
+            <h2 style="margin-top:20px">What Google actually asks for</h2>
+            <p style="margin-top:20px">Google states the rule in a single sentence, and three details inside it decide everything: the testers must be opted in rather than simply listed, the 14 days must run continuously, and the rule targets personal accounts created after 13 November 2023.</p>
+            <p style="margin-top:20px"><a class="link" href="https://support.google.com/googleplay/android-developer/answer/14151465" target="_blank" rel="noopener">Read the policy in full<i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div class="sticky-note" data-reveal>
+            <h3>The three testing tracks</h3>
+            <ul class="checks">
+              <li class="off"><i class="ph ph-minus-circle" aria-hidden="true"></i><span><strong>Internal testing</strong>Up to 100 testers you choose. Fast to run, and it does not satisfy the rule.</span></li>
+              <li><i class="ph ph-check-circle" aria-hidden="true"></i><span><strong>Closed testing</strong>Invited testers only. This is the track Google counts.</span></li>
+              <li class="off"><i class="ph ph-minus-circle" aria-hidden="true"></i><span><strong>Open testing</strong>Anyone can join from the listing. Useful later, not for the requirement.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="quote" style="margin-top:64px" data-reveal>
+          <p>"...you must run a closed test for your app with a minimum of 12 testers who have been opted-in for at least the last 14 days continuously."</p>
+          <cite>Google Play Console Help, answer 14151465</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How the 14 days run</h2>
+          <p>Three phases, and only the middle one takes patience. The rest is setup and paperwork.</p>
+        </div>
+        <div class="phases">
+          <div class="phase" data-reveal>
+            <span class="mono">Day 0</span>
+            <h3>Publish and opt in</h3>
+            <p>Create the closed track, upload your bundle, add your tester list, publish, and share the opt-in link.</p>
+            <span class="part">Your part: <strong>about an hour</strong></span>
+          </div>
+          <div class="phase" data-reveal>
+            <span class="mono">Days 1 to 14</span>
+            <h3>Hold 12 in place</h3>
+            <p>Check the opted-in count daily. Replace anyone who leaves so the number never dips below 12.</p>
+            <span class="part">Your part: <strong>a daily glance</strong></span>
+          </div>
+          <div class="phase" data-reveal>
+            <span class="mono">When the window ends</span>
+            <h3>Apply</h3>
+            <p>Request production access and answer Google's questions about your app and your testing.</p>
+            <span class="part">Your part: <strong>one form</strong></span>
+          </div>
+        </div>
+        <div class="cta-row" data-reveal>
+          <a class="btn btn-soft" href="guides/how-to-pass-google-play-closed-testing.html">Full walkthrough<i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="compare">
+      <div class="wrap">
+        <span class="tag" data-reveal><i class="ph ph-scales" aria-hidden="true"></i>Compare</span>
+        <div class="section-head" style="margin-top:20px">
+          <h2>Three ways to find 12 testers</h2>
+          <p>Two of them put your 14-day streak, and the registration fee you paid Google, at risk. Here is the honest picture of each.</p>
+        </div>
+        <div class="cards">
+          <article class="card" data-reveal>
+            <i class="ph ph-users-three lead" aria-hidden="true"></i>
+            <h3>Assemble them yourself</h3>
+            <p>Friends, community threads, and tester-swap groups.</p>
+            <ul class="checks" style="margin-top:18px">
+              <li><i class="ph ph-x-circle" aria-hidden="true"></i><span>People drop out mid-window and break the streak</span></li>
+              <li><i class="ph ph-x-circle" aria-hidden="true"></i><span>You chase the same 12 people for a fortnight</span></li>
+              <li><i class="ph ph-x-circle" aria-hidden="true"></i><span>No record of whether anyone opened the app</span></li>
+            </ul>
+            <p class="cost"><span class="mono">What it costs</span><strong>Nothing, plus weeks of chasing</strong></p>
+          </article>
+          <article class="card" data-reveal>
+            <i class="ph ph-warning-octagon lead" aria-hidden="true"></i>
+            <h3>Bulk tester gigs</h3>
+            <p>Cheap listings that promise a headcount rather than a test.</p>
+            <ul class="checks" style="margin-top:18px">
+              <li><i class="ph ph-x-circle" aria-hidden="true"></i><span>Emulators and scripted installs that Play Integrity flags</span></li>
+              <li><i class="ph ph-x-circle" aria-hidden="true"></i><span>Testers opt in once, then never open the app again</span></li>
+              <li><i class="ph ph-x-circle" aria-hidden="true"></i><span>Your developer account carries the risk, not theirs</span></li>
+            </ul>
+            <p class="cost"><span class="mono">What it costs</span><strong>A low sticker price, plus the risk</strong></p>
+          </article>
+          <article class="card" data-reveal>
+            <i class="ph ph-shield-check lead" aria-hidden="true"></i>
+            <h3>A managed test</h3>
+            <p>Real testers on real devices, held in place for the full window.</p>
+            <ul class="checks" style="margin-top:18px">
+              <li><i class="ph ph-check-circle" aria-hidden="true"></i><span>12 or more opted-in testers, with replacements</span></li>
+              <li><i class="ph ph-check-circle" aria-hidden="true"></i><span>Daily activity for all 14 days, tracked</span></li>
+              <li><i class="ph ph-check-circle" aria-hidden="true"></i><span>A written report when the window closes</span></li>
+            </ul>
+            <p class="cost"><span class="mono">What it costs</span><strong>Priced per app, on the checkout page</strong></p>
+          </article>
+        </div>
+        <div class="cta-row" data-reveal>
+          <a class="btn btn-soft" href="services/index.html">What a managed test includes<i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="cost">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What a managed test actually pays for</h2>
+          <p>A closed test that satisfies Google means 12 real people opening your app on real devices for 14 days. That is what the money buys.</p>
+        </div>
+        <div class="split" style="margin-top:40px; align-items:start">
+          <div class="sticky-note teal" data-reveal>
+            <h3>Where the cost sits</h3>
+            <ul class="checks">
+              <li><i class="ph ph-user-check" aria-hidden="true"></i><span><strong>Tester time</strong>Twelve people using your app daily for two weeks. This is the largest share of any honest price.</span></li>
+              <li><i class="ph ph-magnifying-glass" aria-hidden="true"></i><span><strong>Vetting</strong>Checking each account for a real device, a real Play history, and normal usage before it joins a campaign.</span></li>
+              <li><i class="ph ph-arrows-clockwise" aria-hidden="true"></i><span><strong>Monitoring and replacement</strong>Watching opt-ins daily and swapping inactive testers before the streak breaks.</span></li>
+              <li><i class="ph ph-chats" aria-hidden="true"></i><span><strong>Support</strong>Someone answering while your campaign is live, not a mailbox that replies next week.</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-reveal>What you should see in a report</h3>
+            <ol class="steps" style="margin-top:24px">
+              <li data-reveal><span class="num">1</span><div><h3>Opt-in timestamps</h3><p>When each tester joined, so you can see the window start.</p></div></li>
+              <li data-reveal><span class="num">2</span><div><h3>Daily activity</h3><p>Evidence the app was opened across the 14 days rather than once.</p></div></li>
+              <li data-reveal><span class="num">3</span><div><h3>Devices and versions</h3><p>The handsets and Android versions involved, which is what a real test batch looks like.</p></div></li>
+              <li data-reveal><span class="num">4</span><div><h3>Feedback</h3><p>What testers reported, and what you changed as a result.</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="learn">
+      <div class="wrap">
+        <span class="tag" data-reveal><i class="ph ph-book-open-text" aria-hidden="true"></i>Closed testing 101</span>
+        <div class="section-head" style="margin-top:20px">
+          <h2>The whole requirement, chapter by chapter</h2>
+          <p>Fifteen short chapters covering everything from the wording of the rule to what to do after a rejection. Pick one to start.</p>
+        </div>
+
+        <div class="learner">
+          <div class="chapters" role="tablist" aria-label="Chapters" id="chapterList">
+            <button type="button" role="tab" id="tab-1" aria-controls="ch-1" aria-selected="true"><span class="n">01</span>The requirement</button>
+            <button type="button" role="tab" id="tab-2" aria-controls="ch-2" aria-selected="false" tabindex="-1"><span class="n">02</span>Background</button>
+            <button type="button" role="tab" id="tab-3" aria-controls="ch-3" aria-selected="false" tabindex="-1"><span class="n">03</span>Where it goes wrong</button>
+            <button type="button" role="tab" id="tab-4" aria-controls="ch-4" aria-selected="false" tabindex="-1"><span class="n">04</span>Setting up the track</button>
+            <button type="button" role="tab" id="tab-5" aria-controls="ch-5" aria-selected="false" tabindex="-1"><span class="n">05</span>Tester quality</button>
+            <button type="button" role="tab" id="tab-6" aria-controls="ch-6" aria-selected="false" tabindex="-1"><span class="n">06</span>Deliverables</button>
+            <button type="button" role="tab" id="tab-7" aria-controls="ch-7" aria-selected="false" tabindex="-1"><span class="n">07</span>Going live</button>
+            <button type="button" role="tab" id="tab-8" aria-controls="ch-8" aria-selected="false" tabindex="-1"><span class="n">08</span>Account types</button>
+            <button type="button" role="tab" id="tab-9" aria-controls="ch-9" aria-selected="false" tabindex="-1"><span class="n">09</span>Timeline</button>
+            <button type="button" role="tab" id="tab-10" aria-controls="ch-10" aria-selected="false" tabindex="-1"><span class="n">10</span>The decision</button>
+            <button type="button" role="tab" id="tab-11" aria-controls="ch-11" aria-selected="false" tabindex="-1"><span class="n">11</span>Recovery</button>
+            <button type="button" role="tab" id="tab-12" aria-controls="ch-12" aria-selected="false" tabindex="-1"><span class="n">12</span>Pre-flight</button>
+            <button type="button" role="tab" id="tab-13" aria-controls="ch-13" aria-selected="false" tabindex="-1"><span class="n">13</span>Anti-fraud checks</button>
+            <button type="button" role="tab" id="tab-14" aria-controls="ch-14" aria-selected="false" tabindex="-1"><span class="n">14</span>The questionnaire</button>
+            <button type="button" role="tab" id="tab-15" aria-controls="ch-15" aria-selected="false" tabindex="-1"><span class="n">15</span>Glossary</button>
+          </div>
+
+          <div>
+            <article class="panel" role="tabpanel" id="ch-1" aria-labelledby="tab-1" tabindex="0">
+              <span class="mono">01 / The requirement</span>
+              <h2>What does the 12-tester rule actually say?</h2>
+              <p>Google asks for a closed test with a minimum of 12 testers who have been opted in for at least the last 14 days continuously. It applies to newly created personal developer accounts, which in practice means accounts set up after 13 November 2023.</p>
+              <p>You meet the rule as a locked step in Play Console. Until the console has counted at least 12 opted-in testers across 14 continuous days, the option to apply for production access stays unavailable.</p>
+              <p class="source"><a class="link" href="https://support.google.com/googleplay/android-developer/answer/14151465" target="_blank" rel="noopener">View the source<i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></p>
+              <p class="count">Chapter 01 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-2" aria-labelledby="tab-2" tabindex="0" hidden>
+              <span class="mono">02 / Background</span>
+              <h2>Why the rule exists at all</h2>
+              <p>Play receives a large volume of first-time submissions from accounts with no publishing history. The closed testing requirement gives reviewers a period of real usage to look at before an app reaches the open store.</p>
+              <p>That is why the rule measures days and opt-ins rather than downloads. A single install tells a reviewer nothing. Two weeks of repeated use by twelve separate people tells them the app is being exercised.</p>
+              <p class="count">Chapter 02 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-3" aria-labelledby="tab-3" tabindex="0" hidden>
+              <span class="mono">03 / Where it goes wrong</span>
+              <h2>The three places a test breaks</h2>
+              <p>Tests rarely fail at the start. They fail in the middle, when a tester drifts away and the opted-in count quietly slips under 12, which is enough to restart the window.</p>
+              <p>The other two failures are structural. Testers sign in with a different Google account than the one on your list, so they never see the app, or they install from a file you sent rather than from the Play listing, so the install never counts.</p>
+              <p class="count">Chapter 03 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-4" aria-labelledby="tab-4" tabindex="0" hidden>
+              <span class="mono">04 / Setting up the track</span>
+              <h2>Getting the closed track live</h2>
+              <p>In Play Console, open your app, go to Testing, then Closed testing. Create a track, upload your bundle, and add your tester list as either individual addresses or a Google Group.</p>
+              <p>Publish the track, then copy the opt-in link. Nothing reaches your testers until the track itself is published, so publish first and circulate the link second.</p>
+              <p class="count">Chapter 04 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-5" aria-labelledby="tab-5" tabindex="0" hidden>
+              <span class="mono">05 / Tester quality</span>
+              <h2>What separates a tester from a headcount</h2>
+              <p>A tester is worth having if three things are true: the account is a real Google account with a Play history, the device is physical, and the person actually opens the app across the window.</p>
+              <p>Headcount alone satisfies nothing. Google's systems look for the pattern of a genuine test, which is why emulator farms and freshly created accounts are the two most common ways a test is thrown out.</p>
+              <p class="count">Chapter 05 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-6" aria-labelledby="tab-6" tabindex="0" hidden>
+              <span class="mono">06 / Deliverables</span>
+              <h2>What you should receive at the end</h2>
+              <p>Ask for evidence rather than a promise. The useful output is a record of opt-in dates, daily activity, the devices and Android versions involved, and the feedback testers gave you.</p>
+              <p>Keep that record. If a production access decision goes against you and you need to respond, a documented test window is the most useful thing you can hold.</p>
+              <p class="count">Chapter 06 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-7" aria-labelledby="tab-7" tabindex="0" hidden>
+              <span class="mono">07 / Going live</span>
+              <h2>Applying for production access</h2>
+              <p>Once the window closes, request production access from Play Console. You will be asked about the app, its audience, and the testing you carried out.</p>
+              <p>It is a review, not a switch. Answer plainly, describe the test you actually ran, and be ready for a follow-up question rather than treating the form as a formality.</p>
+              <p class="count">Chapter 07 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-8" aria-labelledby="tab-8" tabindex="0" hidden>
+              <span class="mono">08 / Account types</span>
+              <h2>Personal accounts and organization accounts</h2>
+              <p>The 12-tester rule targets personal developer accounts created after 13 November 2023. Organization accounts follow a different path and are generally verified against business details instead.</p>
+              <p>Your Play Console shows which rule applies to you. That screen is the authority for your account, not a blog post, including this one.</p>
+              <p class="count">Chapter 08 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-9" aria-labelledby="tab-9" tabindex="0" hidden>
+              <span class="mono">09 / Timeline</span>
+              <h2>How the fortnight actually feels</h2>
+              <p>Day one is admin: publish the track, circulate the link, confirm the count moves. Days two to thirteen are maintenance, and take about a minute a day if the testers are reliable.</p>
+              <p>Day fourteen is the application. If the count held, you already have everything the form asks about.</p>
+              <p class="count">Chapter 09 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-10" aria-labelledby="tab-10" tabindex="0" hidden>
+              <span class="mono">10 / The decision</span>
+              <h2>How the review is decided</h2>
+              <p>The application is judged on the app and on the evidence of testing, not on the size of your marketing budget or how long you have been building.</p>
+              <p>A test that ran properly is the strongest thing you can bring to the review. A test that ran for a day with twelve installs and no activity is the weakest.</p>
+              <p class="count">Chapter 10 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-11" aria-labelledby="tab-11" tabindex="0" hidden>
+              <span class="mono">11 / Recovery</span>
+              <h2>What to do after a rejection</h2>
+              <p>Read the reason before reacting. Rejections cite a specific cause, and the cause decides whether you fix the app, fix the test, or fix both.</p>
+              <p>If the reason is testing, run the window again properly and let it complete. Adding testers to a finished window does not repair it.</p>
+              <p class="count">Chapter 11 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-12" aria-labelledby="tab-12" tabindex="0" hidden>
+              <span class="mono">12 / Pre-flight</span>
+              <h2>Check this before day one</h2>
+              <p>Confirm the policy requirement on your own console screen, make sure your tester list is longer than twelve, and know which Google account each tester will use.</p>
+              <p>Then check the small things: the bundle uploads, the track is published, and the opt-in link opens the listing rather than an error page.</p>
+              <p class="count">Chapter 12 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-13" aria-labelledby="tab-13" tabindex="0" hidden>
+              <span class="mono">13 / Anti-fraud checks</span>
+              <h2>Why emulators get caught</h2>
+              <p>Play's integrity checks look at the device and the account behind an install. Emulated devices, rooted environments, and accounts with no history stand out against a normal test batch.</p>
+              <p>The practical consequence is simple. Testers who are real people on real handsets pass these checks by default, which is the entire argument for paying for genuine testers rather than buying volume.</p>
+              <p class="count">Chapter 13 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-14" aria-labelledby="tab-14" tabindex="0" hidden>
+              <span class="mono">14 / The questionnaire</span>
+              <h2>Answering the production access questions</h2>
+              <p>Expect questions about what the app does, who it is for, how many testers you had, and what you changed as a result of the testing.</p>
+              <p>Specific answers beat polished ones. "Twelve testers, noted a crash on a Xiaomi device, fixed it in build 14, no further crashes in the remaining nine days" is the shape of a credible response.</p>
+              <p class="count">Chapter 14 / 15</p>
+            </article>
+
+            <article class="panel" role="tabpanel" id="ch-15" aria-labelledby="tab-15" tabindex="0" hidden>
+              <span class="mono">15 / Glossary</span>
+              <h2>The words you will meet</h2>
+              <p><strong>Closed test:</strong> a release track limited to testers you invite. <strong>Opted in:</strong> a tester has joined the test through the opt-in link, not merely been added to a list. <strong>Continuous:</strong> an unbroken stretch of days.</p>
+              <p><strong>Production access:</strong> permission to publish to the open store. <strong>Track:</strong> a release channel in Play Console. <strong>Play Integrity:</strong> the checks Google runs on the device and account behind an install.</p>
+              <p class="count">Chapter 15 / 15</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="vetting">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How testers should be vetted</h2>
+          <p>Three things worth checking before you accept anyone into a campaign, whether you recruit them yourself or pay someone to.</p>
+        </div>
+        <ul class="method">
+          <li data-reveal>
+            <span class="n">01</span>
+            <h3>Accounts with history</h3>
+            <p>A real Play Store history and organic usage patterns. Not a Google account created the week your campaign started.</p>
+            <span class="badge">Real accounts</span>
+          </li>
+          <li data-reveal>
+            <span class="n">02</span>
+            <h3>Device and location spread</h3>
+            <p>A mix of handsets and Android versions across several countries reads like a genuine batch. One device model repeated twelve times does not.</p>
+            <span class="badge">Real hardware</span>
+          </li>
+          <li data-reveal>
+            <span class="n">03</span>
+            <h3>Activity that continues</h3>
+            <p>Daily opens across the window, plus a replacement policy for anyone who goes quiet, so the count never falls under 12.</p>
+            <span class="badge">Daily activity</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" id="about">
+      <div class="wrap">
+        <div class="split" style="align-items:start">
+          <div data-reveal>
+            <span class="tag"><i class="ph ph-compass" aria-hidden="true"></i>Why this site exists</span>
+            <h2 style="margin-top:20px">A straight answer to a confusing rule</h2>
+            <p style="margin-top:20px">Most closed testing advice online is either a summary of the policy you have already read, or a sales page with numbers you cannot check. This site is the middle ground: the requirement explained in order, with a source link on every claim about the policy itself.</p>
+            <p style="margin-top:20px">If you would rather not run the fortnight yourself, the start button hands you to a managed service that does. Either route works, as long as twelve testers stay opted in for fourteen continuous days.</p>
+            <p style="margin-top:20px"><a class="link" href="about/index.html">More about this site<i class="ph ph-arrow-right" aria-hidden="true"></i></a></p>
+          </div>
+          <div class="sticky-note blush" data-reveal>
+            <h3>What is not on this site</h3>
+            <ul class="checks">
+              <li><i class="ph ph-info" aria-hidden="true"></i><span><strong>No approval guarantee</strong>Nobody can promise a Google review outcome. Treat any claim that does with suspicion.</span></li>
+              <li><i class="ph ph-info" aria-hidden="true"></i><span><strong>No invented figures</strong>Review counts and approval rates belong to the business that earned them, so this site does not borrow any.</span></li>
+              <li><i class="ph ph-info" aria-hidden="true"></i><span><strong>No policy guarantees</strong>Google can change the rule. Your Play Console screen is the authority for your account.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Common questions</h2>
+        </div>
+        <div class="faq">
+          <div>
+            <details data-reveal>
+              <summary>Who has to run a closed test?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>Personal developer accounts created after 13 November 2023. Organization accounts follow a different path. Check Play Console for the rule attached to your account.</p>
+            </details>
+            <details data-reveal>
+              <summary>Do the same testers have to stay opted in?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>The policy asks for at least 12 testers opted in for 14 continuous days. If the count falls below that, the window can restart.</p>
+            </details>
+            <details data-reveal>
+              <summary>Can internal testers make up the 12?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>No. The requirement is a closed test. Internal testing runs on its own track and does not count toward it.</p>
+            </details>
+            <details data-reveal>
+              <summary>Does finishing the 14 days guarantee production access?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>No. Finishing makes you eligible to apply. Google still reviews your app and your answers before deciding.</p>
+            </details>
+            <details data-reveal>
+              <summary>What happens if I stop the test early?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>The window has to run for 14 continuous days. Stopping it means the count starts again from the day you resume.</p>
+            </details>
+            <details data-reveal>
+              <summary>Do testers need to be in my target countries?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>Google does not publish a country requirement for the testers themselves. A spread of devices and locations does look more like a genuine batch than twelve identical installs.</p>
+            </details>
+          </div>
+          <div>
+            <details data-reveal>
+              <summary>Where do I find the opt-in link?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>On the closed testing track page in Play Console, once the release is published. Nothing reaches testers before that.</p>
+            </details>
+            <details data-reveal>
+              <summary>Why can my testers not see the app?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>They are usually signed in to a different Google account than the one on your tester list, or they opened the listing instead of the opt-in link.</p>
+            </details>
+            <details data-reveal>
+              <summary>Why is the tester count not moving?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>Check that each tester opted in and then installed from the Play Store listing. An install from a file you sent does not register.</p>
+            </details>
+            <details data-reveal>
+              <summary>Can I test more than one app?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>Yes, each app needs its own closed test. The 14-day window is counted per app, so they cannot be pooled.</p>
+            </details>
+            <details data-reveal>
+              <summary>My production access was rejected. Now what?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>Read the stated reason first. If it concerns testing, run a full 14-day window again with testers who are genuinely active, then reapply.</p>
+            </details>
+            <details data-reveal>
+              <summary>Is this site affiliated with Google?<i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+              <p>No. It is an independent guide. Every policy claim links to Google's own documentation so you can verify it yourself.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band closing">
+      <div class="wrap">
+        <h2 data-reveal>Your 14 days can start today.</h2>
+        <p style="margin-top:16px; color:var(--muted)" data-reveal>Get twelve testers opted in and keep them there for the full window.</p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="#learn">Read the 101 first</a>
+        </div>
+        <p class="reassure">Independent guide. Not affiliated with Google.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="services/index.html">Services</a>
+          <a href="pricing/index.html">Pricing</a>
+          <a href="guides/index.html">Guides</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="about/index.html">About</a>
+          <a href="contact/index.html">Contact</a>
+          <a href="app-rejected/index.html">Rejected apps</a>
+          <a href="privacy-policy/index.html">Privacy</a>
+          <a href="terms-conditions/index.html">Terms</a>
+          <a href="refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="assets/site.js" defer></script>
 </body>
 </html>

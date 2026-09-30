@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="How to add testers to a Google Play closed test: email lists versus Google Groups, the opt-in step testers keep getting wrong, and how to fix a tester count that will not move.">
+  <title>How to add testers in Google Play Console (closed test)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="../services/index.html">Services</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../guides/index.html" aria-current="page">Guides</a>
+        <a href="../blog/index.html">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Guides</a><span aria-hidden="true">/</span><span>Adding testers</span>
+        </nav>
+        <div class="page-head">
+          <h1>How to add testers in Play Console</h1>
+          <p class="lede">Adding a name is the easy part. The step that decides whether your count moves is what the tester does afterwards, and it is where most closed tests silently stall.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft" href="how-to-pass-google-play-closed-testing.html">Full walkthrough</a>
+        </div>
+
+        <div class="prose">
+          <h2>Two ways to add people</h2>
+          <p>Play Console accepts either individual Google addresses or a Google Group. Both work; they fail differently.</p>
+
+          <div class="cards two" style="margin-top:32px">
+            <article class="card">
+              <i class="ph ph-envelope-simple lead" aria-hidden="true"></i>
+              <h3>Email list</h3>
+              <p>Fastest for a dozen people you already know. Every address has to be added individually, and each tester must open the opt-in link signed in to that exact account.</p>
+            </article>
+            <article class="card">
+              <i class="ph ph-users lead" aria-hidden="true"></i>
+              <h3>Google Group</h3>
+              <p>Better for larger or changing groups. You add the group once, and members are managed from the group itself. Members still have to opt in individually.</p>
+            </article>
+          </div>
+
+          <h2>The step that gets missed</h2>
+          <p>Being on the list is not the same as being opted in. For a tester to count, they have to:</p>
+          <ol>
+            <li>Be signed in to the Google account that appears on your tester list.</li>
+            <li>Open the opt-in link from the closed testing track.</li>
+            <li>Accept the invitation to become a tester.</li>
+            <li>Install the app from the Play Store listing that opens.</li>
+          </ol>
+          <p>Miss any of those and the tester shows up as invited but not opted in, and your counter does not move.</p>
+
+          <div class="callout mint">
+            <h3>Write the instructions down for them</h3>
+            <p>Send testers the opt-in link plus these four steps in plain text. The single most common cause of a stalled test is a tester who opened the link while signed in to a personal account they do not normally use on that phone.</p>
+          </div>
+
+          <h2>Fixing a count that will not move</h2>
+          <ul class="problems" style="margin-top:32px">
+            <li><span class="p">Testers cannot see the app at all</span><span class="f">They are signed in to a different Google account than the one you listed. Ask them to check which account is active in the Play Store app.</span></li>
+            <li><span class="p">They installed but the count stayed put</span><span class="f">The install did not come from the Play listing. An APK you sent directly will not register as a tester install.</span></li>
+            <li><span class="p">The opt-in link leads nowhere</span><span class="f">The track is not published yet. Publishing is what makes the link live.</span></li>
+            <li><span class="p">The link works but the app is not found</span><span class="f">The tester account was added to a different track than the one you published the release on.</span></li>
+          </ul>
+
+          <h2>How many to add</h2>
+          <p>Add more than twelve. The requirement counts opted-in testers at the lowest point of the window, so spare names are not padding, they are the thing that absorbs a drop-out without your window restarting. Two or three spares is a reasonable buffer for a small test.</p>
+
+          <h2>Removing testers</h2>
+          <p>You can remove addresses from the list, but think about when. Removing people while the window is running is the fastest way to push your opted-in count under twelve. If someone has already gone inactive, replacing them is usually safer than pruning.</p>
+
+          <div class="callout blush">
+            <h3>Never share credentials</h3>
+            <p>Nobody needs your Play Console password, your signing key, or access to your developer account to test your app. Testers need one thing: the opt-in link. Anyone asking for more is asking for more than the job requires.</p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="google-play-production-access-requirements.html">Production access requirements</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../services/index.html">Services</a>
+          <a href="../pricing/index.html">Pricing</a>
+          <a href="../guides/index.html">Guides</a>
+          <a href="../blog/index.html">Blog</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../app-rejected/index.html">Rejected apps</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../terms-conditions/index.html">Terms</a>
+          <a href="../refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

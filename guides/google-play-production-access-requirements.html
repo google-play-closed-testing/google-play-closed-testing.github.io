@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="Google Play production access requirements: what the application asks, how the test window feeds into it, and what a credible answer looks like.">
+  <title>Google Play production access requirements</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="../services/index.html">Services</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../guides/index.html" aria-current="page">Guides</a>
+        <a href="../blog/index.html">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Guides</a><span aria-hidden="true">/</span><span>Production access</span>
+        </nav>
+        <div class="page-head">
+          <h1>Production access requirements</h1>
+          <p class="lede">Production access is a review, not a milestone you unlock. Here is what the application actually looks at, and how to answer it with the evidence your test produced.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft" href="how-to-pass-google-play-closed-testing.html">Full walkthrough</a>
+        </div>
+
+        <div class="prose">
+          <h2>The gating requirement</h2>
+          <p>For personal developer accounts created after 13 November 2023, the production access option stays locked until a closed test has run with at least 12 testers opted in for 14 continuous days. Confirm the exact wording on your own console screen, because the rule is defined by Google and can change.</p>
+
+          <h2>What the application asks about</h2>
+          <p>The questions are not a quiz. They are there to establish that a real test happened. In practice you are being asked to account for three things:</p>
+          <ul>
+            <li><strong>The app and its audience.</strong> What it does and who it is for.</li>
+            <li><strong>The test itself.</strong> How many testers you had, and how the window ran.</li>
+            <li><strong>What you learned.</strong> What testers reported and what you changed as a result.</li>
+          </ul>
+
+          <div class="callout mint">
+            <h3>Specific beats polished</h3>
+            <p>Compare "tested with 12 users and improved the app" against "12 testers opted in on 3 March; two reported a crash on launch with a Xiaomi device; fixed in build 14; no further crashes in the remaining nine days". The second one describes a test. The first one describes a wish.</p>
+          </div>
+
+          <h2>Build the answers while the window runs</h2>
+          <p>This is the part people get wrong. The material you need is produced during the fortnight, not after it. Keep a running note with:</p>
+          <ol>
+            <li>The date each tester opted in, so you can state the window precisely.</li>
+            <li>Evidence of activity across the days, not just the install date.</li>
+            <li>The device models and Android versions involved.</li>
+            <li>Each piece of feedback, and the change you made in response.</li>
+          </ol>
+
+          <h2>Common reasons an application stalls</h2>
+          <ul class="problems" style="margin-top:32px">
+            <li><span class="p">The test window was not continuous</span><span class="f">The opted-in count dropped below twelve at some point, so the qualifying period restarted.</span></li>
+            <li><span class="p">The testers were not opted in</span><span class="f">People were added to the list but never joined through the opt-in link, so they never counted.</span></li>
+            <li><span class="p">The test did not run long enough</span><span class="f">Fourteen continuous days is the requirement. A shorter window does not qualify, regardless of tester count.</span></li>
+            <li><span class="p">The answers describe no actual testing</span><span class="f">Generic responses that could have been written without a test at all.</span></li>
+            <li><span class="p">Store listing problems</span><span class="f">Incomplete listing information, policy issues in the app itself, or assets that do not match what the app does.</span></li>
+          </ul>
+
+          <h2>If the answer is no</h2>
+          <p>Read the stated reason before changing anything. A rejection for testing reasons and a rejection for app policy reasons need opposite responses. If the cause was the test, run a full continuous window again with testers who are genuinely active, and reapply with the record in hand. Adding names to a finished window does not repair it.</p>
+
+          <div class="callout blush">
+            <h3>No one can guarantee this</h3>
+            <p>Approval depends on your app, your listing, and your answers as well as your test. Any service promising a guaranteed outcome is promising something it does not control.</p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="../app-rejected/index.html">Rejected? Start here</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../services/index.html">Services</a>
+          <a href="../pricing/index.html">Pricing</a>
+          <a href="../guides/index.html">Guides</a>
+          <a href="../blog/index.html">Blog</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../app-rejected/index.html">Rejected apps</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../terms-conditions/index.html">Terms</a>
+          <a href="../refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>

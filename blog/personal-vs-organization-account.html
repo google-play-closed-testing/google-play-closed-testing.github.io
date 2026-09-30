@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfaf5">
+  <meta name="description" content="Personal and organization developer accounts follow different paths to production access. Here is how to work out which rule applies to your Play Console.">
+  <title>Personal or organization account: which rule applies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Inter:wght@300..700&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="wrap nav-shell">
+    <header class="nav" id="nav">
+      <a class="logo" href="../index.html"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="../services/index.html">Services</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../guides/index.html">Guides</a>
+        <a href="../blog/index.html" aria-current="page">Blog</a>
+      </nav>
+      <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta>Get started</a>
+    </header>
+  </div>
+  <div id="sentinel" aria-hidden="true"></div>
+
+  <main id="main">
+    <section class="page">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="index.html">Blog</a><span aria-hidden="true">/</span><span>Accounts</span>
+        </nav>
+        <div class="page-head">
+          <h1>Personal or organization</h1>
+          <p class="lede">Not every developer has to run a closed test. Which path you are on depends on the type of account and when it was created.</p>
+        </div>
+
+        <div class="prose">
+          <h2>The distinction that matters</h2>
+          <p>The 12-tester, 14-day rule is written for newly created personal developer accounts. An organization account follows a different verification path, generally centred on confirming the business behind the account rather than on demonstrating a test audience.</p>
+
+          <h2>Working out which one you have</h2>
+          <p>You do not have to guess, and you should not take a blog post's word for it, including this one. Play Console displays the requirement that applies to your account. Look for the production access step and read what it asks for:</p>
+          <ul>
+            <li>If it points you at running a closed test with a tester count and a duration, you are on the personal-account path.</li>
+            <li>If it asks about your organization and its verification status, you are on the organizational path.</li>
+          </ul>
+
+          <div class="callout mint">
+            <h3>The console is the authority</h3>
+            <p>Policy changes. What matters is the wording attached to your own account on the day you read it, because that is what your application will be judged against.</p>
+          </div>
+
+          <h2>Common misunderstandings</h2>
+          <ul>
+            <li><strong>Switching type later.</strong> Converting or moving an account is not a way to sidestep an unmet requirement retroactively.</li>
+            <li><strong>Assuming the date is the whole test.</strong> The creation date matters, but so does the account type. Both need to line up.</li>
+            <li><strong>Assuming a paid account is exempt.</strong> Paying the registration fee is separate from the testing requirement.</li>
+          </ul>
+
+          <h2>If you are on the personal path</h2>
+          <p>Then the work is straightforward, even if it is tedious: a closed track, twelve opted-in testers, fourteen continuous days, then an application. The <a href="../guides/how-to-pass-google-play-closed-testing.html">walkthrough</a> covers the sequence, and <a href="../guides/how-to-add-testers-google-play-console.html">adding testers</a> covers the mechanics that stall most attempts.</p>
+
+          <h2>If you are on the organizational path</h2>
+          <p>Your test does not have to satisfy the 12-tester rule, but a closed test is still worth running before a public release. A fortnight of real usage before launch is useful regardless of which rule applies to your account, and it is the cheapest way to find the crashes that only appear on hardware you do not own.</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+          <a class="btn btn-soft btn-lg" href="../guides/index.html">Browse the guides</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <span class="logo"><span class="logo-mark"><i class="ph ph-seal-check" aria-hidden="true"></i></span>Google Play Closed Testing</span>
+          <p class="foot-note">Closed testing, without the guesswork. Written from Google's published policy, with a source link on every claim about the rule.</p>
+        </div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../services/index.html">Services</a>
+          <a href="../pricing/index.html">Pricing</a>
+          <a href="../guides/index.html">Guides</a>
+          <a href="../blog/index.html">Blog</a>
+          <a href="../about/index.html">About</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../app-rejected/index.html">Rejected apps</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../terms-conditions/index.html">Terms</a>
+          <a href="../refund-policy/index.html">Refunds</a>
+        </nav>
+      </div>
+      <p class="foot-legal">Independent guide. Not affiliated with, endorsed by, or sponsored by Google. Play Console requirements are set by Google and can change; confirm the rule for your own account in Play Console.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="https://testerbee.com/register" target="_blank" rel="noopener" data-cta><i class="ph ph-arrow-right" aria-hidden="true"></i>Get started</a>
+  </div>
+
+  <script src="../assets/site.js" defer></script>
+</body>
+</html>
